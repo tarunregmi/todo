@@ -1,0 +1,38 @@
+.card {
+  gap: 10px;
+  padding-left: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, .07);
+}
+
+.content {
+  justify-self: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  padding: var(--pad-x);
+  background-color: #f7f7f7;
+  flex-flow: column nowrap;
+
+  .check-btn,
+  .delete-btn {
+    cursor: pointer;
+  }
+
+  .check-btn {
+    width: 18px;
+    height: 18px;
+  }
+
+  .delete-btn {
+    width: 20px;
+    height: 20px;
+    background-image: url(/assets/delete-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

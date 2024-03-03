@@ -1,0 +1,45 @@
+.todo {
+  width: 320px;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #ffffff;
+  border: 1px solid #005bbb;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  --pad-x: 20px;
+}
+
+.todo-headr,
+.todo-search,
+.todo-body,
+.todo-footer {
+  padding: 20px;
+}
+
+.todo-headr {
+  color: #ffffff;
+  background-color: #006bdd;
+
+  h1 {
+    font-weight: 900;
+    font-size: 26px;
+  }
+}
+
+.todo-body {
+  height: 100%;
+  overflow: auto;
+  padding-top: 0;
+  scroll-behavior: smooth;
+  display: flex;
+  gap: 10px;
+  flex-flow: column nowrap;
+}
+
+.todo-footer {
+  background-color: #f7f7f7;
+}
