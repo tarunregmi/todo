@@ -8,6 +8,7 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { AdderComponent } from './components/adder/adder.component';
 import { CardComponent } from './components/card/card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EllipsisPipe } from './pipes/ellipsis.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TodoComponent,
     SearchbarComponent,
     AdderComponent,
-    CardComponent
+    CardComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,
