@@ -1,4 +1,4 @@
-<form class="center">
-  <input type="text" name="todo" placeholder="Add new todo">
-  <input type="submit" value="ADD">
+<form class="adder-form center" [formGroup]="adderForm" (ngSubmit)="onSubmit()" autocomplete="off">
+  <input formControlName="todo" type="text" name="todo" placeholder="Add new todo">
+  <button type="submit">ADD</button>
 </form>

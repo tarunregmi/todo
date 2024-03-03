@@ -7,6 +7,7 @@ import { TodoComponent } from './components/todo/todo.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { AdderComponent } from './components/adder/adder.component';
 import { CardComponent } from './components/card/card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { CardComponent } from './components/card/card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

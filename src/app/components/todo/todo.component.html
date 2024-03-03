@@ -3,6 +3,17 @@
     <h1>Todo List</h1>
   </div>
   <div class="todo-search"></div>
-  <div class="todo-body"></div>
-  <div class="todo-footer"></div>
+  <div class="todo-body">
+    <ng-container *ngIf="todos.length; else empty">
+      <ng-container *ngFor="let todo of todos; let idx=index">
+        <tr-card [todo]="todo" (onDelete)="todo_.deleteTodo(idx)" (onCheck)="todo_.updateStorage()"></tr-card>
+      </ng-container>
+    </ng-container>
+    <ng-template #empty>
+      <span class="empty-msg">Todo list is empty!</span>
+    </ng-template>
+  </div>
+  <div class="todo-footer">
+    <tr-adder></tr-adder>
+  </div>
 </div>

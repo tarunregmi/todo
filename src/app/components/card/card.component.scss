@@ -11,6 +11,11 @@
   justify-self: auto;
 }
 
+.content.done {
+  color: #888;
+  text-decoration: line-through;
+}
+
 .actions {
   display: flex;
   gap: 20px;

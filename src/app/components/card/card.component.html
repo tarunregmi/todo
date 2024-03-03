@@ -1,7 +1,7 @@
 <div class="card center">
-  <div class="content"></div>
+  <div class="content" [class.done]="todo.completed">{{ todo.text }}</div>
   <div class="actions">
-    <input class="check-btn" type="checkbox" name="check" title="Done">
-    <button class="delete-btn" title="Delete"></button>
+    <input class="check-btn" type="checkbox" name="check" title="Done" [(ngModel)]="todo.completed" (change)="onCheck.emit()">
+    <button class="delete-btn" title="Delete" (click)="onDelete.emit(todo)"></button>
   </div>
 </div>
