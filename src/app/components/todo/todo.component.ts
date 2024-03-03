@@ -10,13 +10,17 @@ import { TodoService } from 'src/app/services/todo.service';
 export class TodoComponent {
   public todos!: TodoModel[];
 
-  check: any = false;
-
   constructor(public todo_: TodoService) {}
 
   ngOnInit() {
     this.todos = this.todo_.todos;
+  }
 
-    // setInterval(() => console.log(this.check), 2000)
+  searchTodo(text: string) {
+    if (this.todo_.todos.length) {
+      this.todos = this.todo_.todos.filter((todo, i) => {
+        return (new RegExp(text, 'gi')).test(todo.text);
+      });
+    }
   }
 }

@@ -1,4 +1,4 @@
-<form autocomplete="off" class="center">
-  <input type="text" name="search" placeholder="Search todo">
-  <button type="submit">O</button>
+<form autocomplete="off" class="center" (ngSubmit)="onSearch.emit(value)">
+  <input type="text" name="search" placeholder="Search todo" [(ngModel)]="value" (input)="onSearch.emit(value)">
+  <button type="submit"></button>
 </form>

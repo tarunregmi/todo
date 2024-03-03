@@ -2,7 +2,9 @@
   <div class="todo-headr">
     <h1>Todo List</h1>
   </div>
-  <div class="todo-search"></div>
+  <div class="todo-search">
+    <tr-searchbar (onSearch)="searchTodo($event)"></tr-searchbar>
+  </div>
   <div class="todo-body">
     <ng-container *ngIf="todos.length; else empty">
       <ng-container *ngFor="let todo of todos; let idx=index">
